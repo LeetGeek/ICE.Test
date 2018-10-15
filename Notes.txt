@@ -1,0 +1,13 @@
+1. Restore all nuget packages for solution.
+2. Make sure the project named ICE.StockMonitor.UI is set at the startup project.
+3. Build solution and run. 
+
+
+** I added post build tasks to ICE.StockMonitor.PriceService1 and ICE.StockMonitor.PriceService2 so that it copies compiled dll
+ into the correct directory.
+
+The way the application works is that it dynamically loads the the registered exports (in this case of type IStockPriceProvider) 
+from the dlls in the directory (SlnDirectory).\ICE.StockMonitor.UI\bin\Debug\PriceServices
+
+With a more complex ui applicaiton I would also change the way I have ui components getting pulled in --for simplicity sake I just
+ have the StockPriceWatcher ui component hardcoded into the main view instead of being dynamically loaded using prism regions.
