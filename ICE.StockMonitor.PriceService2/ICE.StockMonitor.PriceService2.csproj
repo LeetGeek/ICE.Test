@@ -52,4 +52,8 @@
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>mkdir "$(SolutionDir)\ICE.StockMonitor.UI\bin\Debug\PriceServices\"
+copy /Y "$(TargetDir)$(ProjectName).dll" "$(SolutionDir)\ICE.StockMonitor.UI\bin\Debug\PriceServices\$(ProjectName).dll"</PreBuildEvent>
+  </PropertyGroup>
 </Project>

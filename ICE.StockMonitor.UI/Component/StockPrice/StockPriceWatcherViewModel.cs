@@ -18,7 +18,8 @@ namespace ICE.StockMonitor.UI.Component.StockPrice
 
         private ICommand _stopEngineCommand;
 
-        [Import] private StockPriceProvider client;
+        [Import]
+        private StockPriceProvider client;
 
 
         public StockPriceWatcherViewModel()

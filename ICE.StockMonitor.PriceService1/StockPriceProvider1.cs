@@ -13,7 +13,6 @@ namespace ICE.StockMonitor.PriceService1
     [Export(typeof(IStockPriceProvider))]
     public class StockPriceProvider1 : IStockPriceProvider
     {
-        private readonly Random _randGenerator;
         private readonly Timer _timer;
         private readonly StockPrice[] _stockPrices;
 
